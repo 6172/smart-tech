@@ -1,0 +1,81 @@
+.st-header {
+    color: #e5e5e5;
+    height: 304px;
+    margin: 0 0 25px;
+    position: relative;
+}
+
+.st-header-bg {
+    height: 100%;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+}
+
+.st-nav {
+    background: url(../images/repeats.png) repeat-x 0 0;
+    background: rgba(19, 20, 24, .6);
+    height: 60px;
+    line-height: 60px;
+}
+
+.st-logo {
+    background: url(../images/icons.png) no-repeat 0 0;
+    height: 60px;
+    margin: 0 0 0 11px;
+    width: 230px;
+}
+
+.st-logo > a {
+    display: block;
+    text-indent: -9999em;
+}
+
+.st-menus {
+    font-size: 14px;
+}
+
+.st-menus > li {
+    float: left;
+    line-height: 60px;
+}
+
+.st-menus a {
+    display: block;
+    padding: 0 26px;
+    -webkit-transition: background-color .5s ease 0s;
+    -ms-transition: background-color .5s ease 0s;
+    transition: background-color .5s ease 0s;
+}
+
+.st-menus .on,
+.st-menus a:hover {
+    background: url(../images/repeats.png) repeat-x 0 0;
+    background: rgba(200, 200, 200, .1);
+    color: #fff;
+    font-weight: bold;
+}
+
+.st-page-summary {
+    margin: 0 -439px 0 0;
+    position: absolute;
+    right: 50%;
+    text-align: right;
+    top: 100px;
+}
+
+.st-page-summary > h2 {
+    font-size: 48px;
+    line-height: 65px;
+    padding: 20px 0 0;
+}
+
+.st-page-summary > p {
+    font-size: 14px;
+    line-height: 24px;
+    word-wrap: break-word;
+    width: 300px;
+}

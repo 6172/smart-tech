@@ -1,0 +1,166 @@
+/*-------- ST style */
+
+/*---- background color */
+
+body {
+    background-color: #f2f2f2;
+}
+
+/*---- container */
+
+.st-container {
+    margin: 0 auto;
+    width: 1000px;
+}
+
+/*---- main part */
+
+.st-main {
+    min-height: 500px;
+    overflow: hidden;
+}
+
+/*---- common sidebar style */
+
+.st-sidebar {
+    float: left;
+    margin: 0 0 0 11px;
+    width: 230px;
+}
+
+.st-side-nav {
+    background-color: #fff;
+    border: 1px solid #e5e5e5;
+    font-size: 14px;
+}
+
+.st-side-nav a {
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    border-top: 1px solid #eee;
+    color: #3c3d41;
+    display: block;
+    line-height: 48px;
+    height: 49px;
+    padding: 0 18px;
+}
+
+.st-side-nav > li:first-child > a {
+    border: none;
+}
+
+.st-side-nav a:hover {
+    font-weight: bold;
+}
+
+.st-side-nav .on {
+    border-left: 3px solid #9daeb9;
+    font-weight: bold;
+    padding-left: 15px;
+}
+
+.toggle-nav > li > a {
+    padding: 0 28px 0 18px;
+    position: relative;
+}
+
+.toggle-nav > li > a:after {
+    content: '\203A';
+    height: 10px;
+    line-height: 10px;
+    position: absolute;
+    right: 19px;
+    text-align: center;
+    -webkit-transition: all .5s ease 0s;
+    -ms-transition: all .5s ease 0s;
+    transition: all .5s ease 0s;
+    top: 20px;
+    width: 10px;
+}
+
+.toggle-nav > li > .opened:after {
+    -webkit-transform: rotate(90deg); 
+    -ms-transform: rotate(90deg); 
+    transform: rotate(90deg); 
+}
+
+.toggle-sub-nav a:hover,
+.toggle-sub-nav .on {
+    background-color: #9daeb9;
+    color: #fff;
+}
+
+.toggle-sub-nav {
+    display: none;
+}
+
+/*---- common content style */
+
+.st-content {
+    background-color: #fff;
+    border: 1px solid #e5e5e5;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    float: right;
+    margin: 0 11px 0 0;
+    width: 728px;
+}
+
+/*---- article style */
+
+.st-article {
+    color: #484848;
+    font-size: 13px;
+    padding: 29px 50px 41px;
+}
+
+.st-article p {
+    line-height: 22px;
+    margin: 18px 0;
+    text-align: justify;
+    text-indent: 2em;
+    word-wrap: break-word;
+}
+
+.st-article h1 {
+    font-size: 20px;
+}
+.st-article h2 {
+    font-size: 18px;
+}
+.st-article h3 {
+    font-size: 16px;
+}
+.st-article h4,
+.st-article h5,
+.st-article h6 {
+    font-size: 14px;
+}
+
+.st-article a {
+    color: #588feb;
+}
+
+.st-article a:hover {
+    text-decoration: underline;
+}
+
+.st-article img {
+    display: block;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+/*---- go to top style */
+
+#top-rocket {
+    background: #fff url(../images/icons.png) no-repeat 0 0;
+    bottom: 20px;
+    display: none;
+    height: 50px;
+    margin: 0 -580px 0 0;
+    position: fixed;
+    right: 50%;
+    text-indent: -9999em;
+    width: 50px;
+}

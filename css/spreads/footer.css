@@ -1,0 +1,79 @@
+.st-footer {
+    background-color: #292f34;
+    font-size: 14px;
+    height: 248px;
+    margin: 28px 0 0;
+    padding: 29px 0 0;
+}
+
+.st-logo-footer {
+    margin: 0 0 0 11px;
+    width: 230px;
+}
+
+.st-logo-footer > a {
+    background: url(../images/icons.png) no-repeat 0 0;
+    display: block;
+    height: 53px;
+    text-indent: -9999em;
+    width: 62px;
+}
+
+.st-logo-footer > small {
+    color: #666;
+    font-size: 10px;
+    line-height: 18px;
+    text-align: justify;
+    text-transform: uppercase;
+}
+
+.st-footer-nav {
+    margin: 0 0 0 241px;
+    overflow: hidden;
+    padding: 0 0 0 20px;
+    width: 500px;
+}
+
+.st-footer-nav-section {
+    color: #999;
+    float: left;
+    margin: 0 72px 0 0;
+    width: 120px;
+}
+
+.st-footer-nav-section > h3 {
+    border-bottom: 1px solid #626262;
+    color: #fff;
+    line-height: 30px;
+}
+
+.st-footer-nav-section > ul {
+    font-size: 13px;
+    line-height: 18px;
+    padding: 12px 0 0;
+}
+
+.st-footer-nav-section a {
+    display: block;
+}
+
+.st-footer-nav-section a:hover {
+    color: #fff;
+}
+
+.st-footer-service {
+    color: #999;
+}
+
+.st-footer-service > dt {
+    line-height: 48px;
+}
+
+.st-footer-service > dd {
+    height: 28px;
+}
+
+.st-footer-service > dt:first-child + dd {
+    color: #fff;
+    font-size: 18px;
+}
