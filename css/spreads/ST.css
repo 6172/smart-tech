@@ -151,11 +151,78 @@ body {
     margin: 0 auto;
 }
 
+.st-article-pubtime {
+    border-color: #e5e6e6;
+    border-style: solid;
+    border-width: 1px 1px 3px;
+    border-radius: 4px;
+    float: left;
+    margin: 0 27px 0 0;
+    height: 56px;
+    width: 48px;
+}
+
+.st-article-pubtime > time {
+    color: #7f8c8c;
+    display: block;
+    text-align: center;
+}
+
+.st-article-pubtime > .month {
+    font-size: 16px;
+    line-height: 22px;
+    padding: 5px 0 0;
+}
+
+.st-article-pubtime > .day {
+    font-size: 28px;
+    position: relative;
+    top: -5px;
+}
+
+.st-article-header > h1 {
+    height: 28px;
+}
+
+.st-article-header > p {
+    color: #999;
+    font-size: 12px;
+    height: 30px;
+    margin: 0;
+    text-indent: 0;
+}
+
+.st-article-pager {
+    margin: 30px 0 0;
+    overflow: hidden;
+}
+
+.st-article-pager > a {
+    border: 1px solid transparent;
+    border-radius: 19px;
+    color: #666;
+    display: block;
+    font-size: 14px;
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+    -webkit-transition: border-color .3s ease 0s;
+    -ms-transition: border-color .3s ease 0s;
+    transition: border-color .3s ease 0s;
+    width: 122px;
+}
+
+.st-article-pager > a:hover {
+    border-color: #dcdcdc;
+    text-decoration: none;
+}
+
 /*---- go to top style */
 
 #top-rocket {
     background: #fff url(../images/icons.png) no-repeat 0 0;
     bottom: 20px;
+    cursor: pointer;
     display: none;
     height: 50px;
     margin: 0 -580px 0 0;
