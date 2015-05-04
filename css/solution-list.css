@@ -51,6 +51,7 @@
 }
 
 .st-list-loader > .trigger {
+    border-radius: 3px;
     color: #fff;
     font-size: 15px;
     display: block;
@@ -60,14 +61,24 @@
     z-index: 2;
 }
 
+.st-list-loader > .trigger:hover {
+    background-color: #8997a1;
+}
+
+.st-list-loader > .trigger:active {
+    box-shadow: 0 0 15px rgba(0, 0, 0, .3) inset;
+}
+
 .st-list-loader > .loader {
-    background: url(../images/loading.gif) no-repeat 0 0;
-    height: 30px;
+    background-image: url(../images/loading.gif);
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    height: 32px;
     left: 50%;
-    margin: -15px 0 0 -15px;
+    margin: -16px 0 0 -16px;
     position: absolute;
     top: 50%;
-    width: 30px;
+    width: 32px;
     z-index: 1;
 }
 
@@ -79,37 +90,155 @@
     display: block;
 }
 
+@-webkit-keyframes audioWave {
+    25% {
+        background-image: linear-gradient(#fff, #fff), linear-gradient(#ccc, #ccc), linear-gradient(#ccc, #ccc), linear-gradient(#ccc, #ccc), linear-gradient(#ccc, #ccc);
+        background-position: 0 50%, 10px 50%, 20px 50%, 30px 50%, 40px 50%;
+        background-repeat: no-repeat;
+        background-size: 8px 32px, 8px 4px, 8px 4px, 8px 4px, 8px 4px;
+    }
+    37.5% {
+        background-image: linear-gradient(#ccc, #ccc), linear-gradient(#fff, #fff), linear-gradient(#ccc, #ccc), linear-gradient(#ccc, #ccc), linear-gradient(#ccc, #ccc);
+        background-position: 0 50%, 10px 50%, 20px 50%, 30px 50%, 40px 50%;
+        background-repeat: no-repeat;
+        background-size: 8px 4px, 8px 32px, 8px 4px, 8px 4px, 8px 4px;
+    }
+    50% {
+        background-image: linear-gradient(#ccc, #ccc), linear-gradient(#ccc, #ccc), linear-gradient(#fff, #fff), linear-gradient(#ccc, #ccc), linear-gradient(#ccc, #ccc);
+        background-position: 0 50%, 10px 50%, 20px 50%, 30px 50%, 40px 50%;
+        background-repeat: no-repeat;
+        background-size: 8px 4px, 8px 4px, 8px 32px, 8px 4px, 8px 4px;
+    }
+    62.5% {
+        background-image: linear-gradient(#ccc, #ccc), linear-gradient(#ccc, #ccc), linear-gradient(#ccc, #ccc), linear-gradient(#fff, #fff), linear-gradient(#ccc, #ccc);
+        background-position: 0 50%, 10px 50%, 20px 50%, 30px 50%, 40px 50%;
+        background-repeat: no-repeat;
+        background-size: 8px 4px, 8px 4px, 8px 4px, 8px 32px, 8px 4px;
+    }
+    75% {
+        background-image: linear-gradient(#ccc, #ccc), linear-gradient(#ccc, #ccc), linear-gradient(#ccc, #ccc), linear-gradient(#ccc, #ccc), linear-gradient(#fff, #fff);
+        background-position: 0 50%, 10px 50%, 20px 50%, 30px 50%, 40px 50%;
+        background-repeat: no-repeat;
+        background-size: 8px 4px, 8px 4px, 8px 4px, 8px 4px, 8px 32px;
+    }
+}
+@-moz-keyframes audioWave {
+    25% {
+        background-image: linear-gradient(#fff, #fff), linear-gradient(#ccc, #ccc), linear-gradient(#ccc, #ccc), linear-gradient(#ccc, #ccc), linear-gradient(#ccc, #ccc);
+        background-position: 0 50%, 10px 50%, 20px 50%, 30px 50%, 40px 50%;
+        background-repeat: no-repeat;
+        background-size: 8px 32px, 8px 4px, 8px 4px, 8px 4px, 8px 4px;
+    }
+    37.5% {
+        background-image: linear-gradient(#ccc, #ccc), linear-gradient(#fff, #fff), linear-gradient(#ccc, #ccc), linear-gradient(#ccc, #ccc), linear-gradient(#ccc, #ccc);
+        background-position: 0 50%, 10px 50%, 20px 50%, 30px 50%, 40px 50%;
+        background-repeat: no-repeat;
+        background-size: 8px 4px, 8px 32px, 8px 4px, 8px 4px, 8px 4px;
+    }
+    50% {
+        background-image: linear-gradient(#ccc, #ccc), linear-gradient(#ccc, #ccc), linear-gradient(#fff, #fff), linear-gradient(#ccc, #ccc), linear-gradient(#ccc, #ccc);
+        background-position: 0 50%, 10px 50%, 20px 50%, 30px 50%, 40px 50%;
+        background-repeat: no-repeat;
+        background-size: 8px 4px, 8px 4px, 8px 32px, 8px 4px, 8px 4px;
+    }
+    62.5% {
+        background-image: linear-gradient(#ccc, #ccc), linear-gradient(#ccc, #ccc), linear-gradient(#ccc, #ccc), linear-gradient(#fff, #fff), linear-gradient(#ccc, #ccc);
+        background-position: 0 50%, 10px 50%, 20px 50%, 30px 50%, 40px 50%;
+        background-repeat: no-repeat;
+        background-size: 8px 4px, 8px 4px, 8px 4px, 8px 32px, 8px 4px;
+    }
+    75% {
+        background-image: linear-gradient(#ccc, #ccc), linear-gradient(#ccc, #ccc), linear-gradient(#ccc, #ccc), linear-gradient(#ccc, #ccc), linear-gradient(#fff, #fff);
+        background-position: 0 50%, 10px 50%, 20px 50%, 30px 50%, 40px 50%;
+        background-repeat: no-repeat;
+        background-size: 8px 4px, 8px 4px, 8px 4px, 8px 4px, 8px 32px;
+    }
+}
+@-ms-keyframes audioWave {
+    25% {
+        background-image: linear-gradient(#fff, #fff), linear-gradient(#ccc, #ccc), linear-gradient(#ccc, #ccc), linear-gradient(#ccc, #ccc), linear-gradient(#ccc, #ccc);
+        background-position: 0 50%, 10px 50%, 20px 50%, 30px 50%, 40px 50%;
+        background-repeat: no-repeat;
+        background-size: 8px 32px, 8px 4px, 8px 4px, 8px 4px, 8px 4px;
+    }
+    37.5% {
+        background-image: linear-gradient(#ccc, #ccc), linear-gradient(#fff, #fff), linear-gradient(#ccc, #ccc), linear-gradient(#ccc, #ccc), linear-gradient(#ccc, #ccc);
+        background-position: 0 50%, 10px 50%, 20px 50%, 30px 50%, 40px 50%;
+        background-repeat: no-repeat;
+        background-size: 8px 4px, 8px 32px, 8px 4px, 8px 4px, 8px 4px;
+    }
+    50% {
+        background-image: linear-gradient(#ccc, #ccc), linear-gradient(#ccc, #ccc), linear-gradient(#fff, #fff), linear-gradient(#ccc, #ccc), linear-gradient(#ccc, #ccc);
+        background-position: 0 50%, 10px 50%, 20px 50%, 30px 50%, 40px 50%;
+        background-repeat: no-repeat;
+        background-size: 8px 4px, 8px 4px, 8px 32px, 8px 4px, 8px 4px;
+    }
+    62.5% {
+        background-image: linear-gradient(#ccc, #ccc), linear-gradient(#ccc, #ccc), linear-gradient(#ccc, #ccc), linear-gradient(#fff, #fff), linear-gradient(#ccc, #ccc);
+        background-position: 0 50%, 10px 50%, 20px 50%, 30px 50%, 40px 50%;
+        background-repeat: no-repeat;
+        background-size: 8px 4px, 8px 4px, 8px 4px, 8px 32px, 8px 4px;
+    }
+    75% {
+        background-image: linear-gradient(#ccc, #ccc), linear-gradient(#ccc, #ccc), linear-gradient(#ccc, #ccc), linear-gradient(#ccc, #ccc), linear-gradient(#fff, #fff);
+        background-position: 0 50%, 10px 50%, 20px 50%, 30px 50%, 40px 50%;
+        background-repeat: no-repeat;
+        background-size: 8px 4px, 8px 4px, 8px 4px, 8px 4px, 8px 32px;
+    }
+}
+@keyframes audioWave {
+    25% {
+        background-image: linear-gradient(#fff, #fff), linear-gradient(#ccc, #ccc), linear-gradient(#ccc, #ccc), linear-gradient(#ccc, #ccc), linear-gradient(#ccc, #ccc);
+        background-position: 0 50%, 10px 50%, 20px 50%, 30px 50%, 40px 50%;
+        background-repeat: no-repeat;
+        background-size: 8px 32px, 8px 4px, 8px 4px, 8px 4px, 8px 4px;
+    }
+    37.5% {
+        background-image: linear-gradient(#ccc, #ccc), linear-gradient(#fff, #fff), linear-gradient(#ccc, #ccc), linear-gradient(#ccc, #ccc), linear-gradient(#ccc, #ccc);
+        background-position: 0 50%, 10px 50%, 20px 50%, 30px 50%, 40px 50%;
+        background-repeat: no-repeat;
+        background-size: 8px 4px, 8px 32px, 8px 4px, 8px 4px, 8px 4px;
+    }
+    50% {
+        background-image: linear-gradient(#ccc, #ccc), linear-gradient(#ccc, #ccc), linear-gradient(#fff, #fff), linear-gradient(#ccc, #ccc), linear-gradient(#ccc, #ccc);
+        background-position: 0 50%, 10px 50%, 20px 50%, 30px 50%, 40px 50%;
+        background-repeat: no-repeat;
+        background-size: 8px 4px, 8px 4px, 8px 32px, 8px 4px, 8px 4px;
+    }
+    62.5% {
+        background-image: linear-gradient(#ccc, #ccc), linear-gradient(#ccc, #ccc), linear-gradient(#ccc, #ccc), linear-gradient(#fff, #fff), linear-gradient(#ccc, #ccc);
+        background-position: 0 50%, 10px 50%, 20px 50%, 30px 50%, 40px 50%;
+        background-repeat: no-repeat;
+        background-size: 8px 4px, 8px 4px, 8px 4px, 8px 32px, 8px 4px;
+    }
+    75% {
+        background-image: linear-gradient(#ccc, #ccc), linear-gradient(#ccc, #ccc), linear-gradient(#ccc, #ccc), linear-gradient(#ccc, #ccc), linear-gradient(#fff, #fff);
+        background-position: 0 50%, 10px 50%, 20px 50%, 30px 50%, 40px 50%;
+        background-repeat: no-repeat;
+        background-size: 8px 4px, 8px 4px, 8px 4px, 8px 4px, 8px 32px;
+    }
+}
+
 @media screen and (min-height: 1px) {
-    .st-list-loader > .loader,
-    .st-list-loader > .loader:before,
-    .st-list-loader > .loader:after {
-        background-color: #fff;
-        height: 20px;
-        position: absolute;
-        width: 4px;
-    }
-
-    .st-list-loader > .loader:before,
-    .st-list-loader > .loader:after {
-        content: '';
-        top: 0;
-    }
-
-    .st-list-loader > .loader {
+    .animation .st-list-loader > .loader {
+        -webkit-animation: audioWave 1.5s linear infinite;
+        -moz-animation: audioWave 1.5s linear infinite;
+        -ms-animation: audioWave 1.5s linear infinite;
+        animation: audioWave 1.5s linear infinite;
+        background-image: linear-gradient(#ccc, #ccc), linear-gradient(#ccc, #ccc), linear-gradient(#ccc, #ccc), linear-gradient(#ccc, #ccc), linear-gradient(#ccc, #ccc);
+        background-position: 0 50%, 10px 50%, 20px 50%, 30px 50%, 40px 50%;
+        background-repeat: no-repeat;
+        background-size: 8px 4px, 8px 4px, 8px 4px, 8px 4px, 8px 4px;
+        height: 32px;
         left: 50%;
-        margin: -10px 0 0 -2px;
+        margin: -16px 0 0 -24px;
+        position: absolute;
         top: 50%;
-    }
-
-    .st-list-loader > .loader:before {
-        left: -8px;
-    }
-
-    .st-list-loader > .loader:after {
-        right: -8px;
+        width: 48px;
     }
 
     .st-list-loader > .trigger {
+        display: block;
         -webkit-transition: all .3s ease 0s;
         -ms-transition: all .3s ease 0s;
         transition: all .3s ease 0s;

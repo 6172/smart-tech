@@ -53,7 +53,7 @@
 
 .st-menus .on,
 .st-menus a:hover {
-    background: url(../images/repeats.png) repeat-x 0 0;
+    background: url(../images/repeats.png) repeat-x 0 -61px;
     background: rgba(200, 200, 200, .1);
     color: #fff;
     font-weight: bold;
